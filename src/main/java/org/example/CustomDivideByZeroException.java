@@ -32,11 +32,19 @@ public class CustomDivideByZeroException extends  Exception {
         return b;
     }
 
+    public void setA(double newA) {a = newA;}
+    public void setB(double newB) {b = newB;}
+
     /**
      * Constructor for the CustomDivideByZeroException.
+     *
+     *
      */
-    public CustomDivideByZeroException() {
+    public CustomDivideByZeroException(double a, double b) {
         // TODO: Modify this constructor to accept and store the two values attempted to be divided
         super("Attempted to divide by zero");
+        setA(a);
+        setB(b);
+
     }
 }
